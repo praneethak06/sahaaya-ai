@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sahaaya | Government Help in Your Language</title>
+  <meta name="description" content="A voice-first assistant helping first-time women users understand PM Ujjwala Yojana.">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="badge">🌱 SAHAAYA</div>
+      <h1>Government help,<br><span>in your language.</span></h1>
+      <p class="sub">You don't need English. You don't need to know how websites work. Just ask.</p>
+
+      <div class="language-row">
+        <label for="language">Your language</label>
+        <select id="language" aria-label="Choose your language">
+          <option value="Tamil">தமிழ் (Tamil)</option>
+          <option value="Telugu">తెలుగు (Telugu)</option>
+          <option value="Hindi">हिन्दी (Hindi)</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="card assistant" aria-label="Sahaaya assistant">
+      <div class="scheme">
+        <div class="scheme-icon">🔥</div>
+        <div>
+          <strong>PM Ujjwala Yojana</strong>
+          <span>Free guidance for a new LPG connection</span>
+        </div>
+      </div>
+
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="message bot">
+          <div class="avatar">S</div>
+          <div class="bubble">
+            <strong>வணக்கம்! 👋</strong><br>
+            நான் உங்களுக்கு உஜ்வலா திட்டத்தைப் பற்றி எளிய முறையில் சொல்ல உதவுகிறேன்.
+            நீங்கள் என்ன தெரிந்து கொள்ள விரும்புகிறீர்கள்?
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <button data-q="Am I eligible for PM Ujjwala Yojana?">👩‍🦰 Am I eligible?</button>
+        <button data-q="What documents do I need?">📄 What documents?</button>
+        <button data-q="How do I apply?">📝 How do I apply?</button>
+        <button data-q="What benefits do I get?">🎁 What do I get?</button>
+      </div>
+
+      <div class="composer">
+        <button id="micBtn" class="mic" aria-label="Speak" title="Speak">🎙️</button>
+        <textarea id="input" rows="1" placeholder="Type here or press the microphone..." aria-label="Your question"></textarea>
+        <button id="sendBtn" class="send" aria-label="Send">➤</button>
+      </div>
+      <div id="status" class="status">Tap the microphone and speak naturally.</div>
+    </section>
+
+    <section class="trust">
+      <div>🔒 <b>Your details stay yours.</b><br><span>Never enter Aadhaar, OTP, password or bank numbers here.</span></div>
+      <a href="https://www.pmuy.gov.in/" target="_blank" rel="noopener">Official PMUY website ↗</a>
+    </section>
+
+    <footer>
+      <span>Sahaaya • AI-powered public-service guidance</span>
+      <span>Built with Gemini + Google Cloud Run</span>
+    </footer>
+  </main>
+<script src="/static/app.js"></script>
+</body>
+</html>
