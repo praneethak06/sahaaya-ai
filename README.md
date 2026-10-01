@@ -1,69 +1,202 @@
+# 🌐 Live Demo
+
+**https://sahaaya-ai-7ty0.onrender.com**
+
 # Sahaaya 🌱
 
-A voice-first AI assistant for first-time women internet users, helping them understand and navigate **PM Ujjwala Yojana 2.0** in a regional language.
+### Voice-first AI assistance for first-time women internet users
 
-## Hackathon alignment
+Sahaaya is an AI-powered, voice-first assistant designed to help first-time women internet users understand and navigate essential government services without requiring prior digital knowledge or English proficiency.
 
-- One essential government scheme
-- Voice + simple text interaction
-- Regional-language responses
-- No prior digital knowledge required
-- Gemini-powered conversational guidance
-- Public Cloud Run deployment
-- Privacy guardrails: never request Aadhaar numbers, OTPs, passwords or bank numbers
+For this hackathon MVP, Sahaaya focuses on **Pradhan Mantri Ujjwala Yojana 2.0 (PMUY)** and provides simple guidance in regional languages.
 
-## Run locally
+## 🚀 Live Demo
 
-Python 3.11+
+**https://sahaaya-ai-7ty0.onrender.com**
+
+## 💡 Problem
+
+Many first-time internet users face barriers such as:
+
+- Limited digital literacy
+- Lack of English proficiency
+- Difficulty understanding government schemes
+- Lack of someone to guide them through online services
+
+Sahaaya addresses this by providing conversational, regional-language assistance through simple text and voice interaction.
+
+## ✨ Features
+
+- 🎙️ Voice-first interaction
+- 💬 Simple conversational text interface
+- 🌐 Regional language support: Tamil, Telugu and Hindi
+- 🤖 Gemini-powered AI guidance
+- 📋 PMUY eligibility guidance
+- 📄 Required-document guidance
+- 📝 Step-by-step application guidance
+- 🎁 Explanation of scheme benefits
+- 🔐 Privacy-first design
+- 🚫 Never asks users to provide Aadhaar numbers, OTPs, passwords or bank account numbers
+- 🔗 Direct access to the official PMUY website
+- 📱 Designed for users with zero prior digital knowledge
+
+## 🏗️ Technology Stack
+
+**Frontend**
+- HTML
+- CSS
+- JavaScript
+- Browser Speech Recognition
+- Browser Speech Synthesis
+
+**Backend**
+- Python
+- Flask
+- Gunicorn
+
+**AI**
+- Google Gemini API
+
+**Deployment**
+- Render
+
+## 🔄 How It Works
+
+```text
+User
+  ↓
+Voice / Text Input
+  ↓
+Sahaaya Web Interface
+  ↓
+Flask Backend
+  ↓
+Google Gemini
+  ↓
+Simple Regional-Language Response
+  ↓
+Text + Voice Output
+```
+
+## 🎯 Demo Flow
+
+1. Open the live application.
+2. Select a preferred language.
+3. Ask whether you are eligible for PMUY.
+4. Ask what documents are required.
+5. Ask how to apply.
+6. Ask what benefits are available.
+7. Follow the simple guidance provided by Sahaaya.
+8. Visit the official PMUY website when ready to proceed.
+
+Sahaaya provides guidance and **does not submit an application on behalf of the user**.
+
+## 🔐 Privacy & Safety
+
+Sahaaya is designed with privacy in mind.
+
+The assistant does **not** request or process:
+
+- Aadhaar numbers
+- OTPs
+- Passwords
+- Bank account numbers
+- Other sensitive personal credentials
+
+Users are directed to the official government website for the actual application process.
+
+## 🛠️ Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/praneethak06/sahaaya-ai.git
+cd sahaaya-ai
+```
+
+### 2. Create a virtual environment
 
 ```bash
 python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS/Linux
-source .venv/bin/activate
+```
 
+Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+macOS/Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-Create a `.env` or set the environment variable:
+### 4. Configure Gemini API
 
-```bash
-GEMINI_API_KEY=YOUR_KEY
+Set the environment variable:
+
+```text
+GEMINI_API_KEY=YOUR_API_KEY
 ```
 
-Then:
+Do **not** commit the API key to GitHub.
+
+### 5. Run the application
 
 ```bash
 python app.py
 ```
 
-Open http://localhost:8080
+Open:
 
-## Deploy to Cloud Run
-
-Google Cloud CLI:
-
-```bash
-gcloud auth login
-gcloud config set project YOUR_PROJECT_ID
-
-gcloud run deploy sahaaya --source . --region asia-south1 --allow-unauthenticated --set-env-vars GEMINI_API_KEY=YOUR_KEY
+```text
+http://localhost:8080
 ```
 
-Do not put the API key into GitHub. For a production deployment, use Secret Manager instead of a plain environment variable.
+## 📁 Project Structure
 
-## Demo flow
+```text
+sahaaya-ai/
+│
+├── app.py
+├── requirements.txt
+├── Dockerfile
+├── .env.example
+├── README.md
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    ├── app.js
+    └── style.css
+```
 
-1. Open the app.
-2. Keep Tamil selected.
-3. Press the microphone.
-4. Ask: "இந்த திட்டத்திற்கு நான் தகுதியானவரா?" (Am I eligible?)
-5. Ask: "என்ன ஆவணங்கள் வேண்டும்?" (What documents do I need?)
-6. Ask: "எப்படி விண்ணப்பிப்பது?" (How do I apply?)
-7. Show the official PMUY link.
-8. Explain that the app guides the user and does not submit an application.
+## 🌍 Scalability
 
-## Official source
+The current MVP focuses on PMUY, but the same architecture can be extended to additional government schemes and essential services by adding verified scheme-specific knowledge and guided workflows.
+
+## 🎯 SDG Alignment
+
+Sahaaya supports the goals of:
+
+- **SDG 5:** Gender Equality
+- **SDG 4:** Quality Education
+- **SDG 10:** Reduced Inequalities
+
+## 🔗 Official Government Source
+
+Pradhan Mantri Ujjwala Yojana:
 
 https://www.pmuy.gov.in/
+
+## 👩‍💻 Repository
+
+https://github.com/praneethak06/sahaaya-ai
